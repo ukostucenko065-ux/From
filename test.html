@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ззовні (From 2022)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="audio-widget">
+        <button id="audioControl" class="pulse-button">🔊</button>
+        <audio id="backgroundAudio" src="sound.mp3" loop></audio>
+        <span class="audio-label">Атмосфера</span>
+    </div>
+    <header class="hero-banner small-banner">
+        <div class="hero-overlay">
+            <div class="hero-text">
+                <h1>ТЕСТ</h1>
+                <p class="tagline">Чи зможеш ти дожити до ранку?</p>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <nav class="nav-bar">
+            <a href="index.html" class="nav-item">Про серіал</a>
+            <a href="plot.html" class="nav-item">Опис сюжету</a>
+            <a href="cast.html" class="nav-item">Дійові особи</a>
+            <a href="theories.html" class="nav-item">Теорії глядачів</a>
+            <a href="test.html" class="nav-item active">Інтерактив</a>
+        </nav>
+        <main class="main-content">
+            <h2 class="section-title">Перевір свої шанси</h2>
+            <form id="survivalForm" class="survival-form">
+                <div class="form-group">
+                    <p class="question">1. Ви бачите повалене дерево на дорозі. Ваші дії?</p>
+                    <label class="radio-label">
+                        <input type="radio" name="q1" value="0"> Спробую переїхати або об'їхати
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="q1" value="1"> Негайно розвернуся і поїду назад
+                    </label>
+                </div>
+                <div class="form-group">
+                    <p class="question">2. Які речі ви візьмете з собою в ліс? (Оберіть декілька)</p>
+                    <label class="check-label">
+                        <input type="checkbox" name="q2" value="talisman"> Кам'яний талісман
+                    </label>
+                    <label class="check-label">
+                        <input type="checkbox" name="q2" value="lantern"> Ліхтар
+                    </label>
+                    <label class="check-label">
+                        <input type="checkbox" name="q2" value="radio"> Рацію
+                    </label>
+                </div>
+                <div class="form-group">
+                    <p class="question">3. Де ви плануєте провести першу ніч?</p>
+                    <select name="location" class="form-select">
+                        <option value="bus">В автобусі</option>
+                        <option value="house">У будинку з талісманом</option>
+                        <option value="forest">У наметі в лісі</option>
+                        <option value="cellar">У підвалі</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <p class="question">4. Ваше послання тим, хто приїде після вас:</p>
+                    <textarea name="message" placeholder="Напишіть застереження..." class="form-textarea"></textarea>
+                </div>
+                <button type="button" class="submit-btn" onclick="checkResult()">Дізнатися долю</button>
+            </form>
+            <div id="resultBox" class="result-box hidden">
+                <h3>Ваш результат:</h3>
+                <p id="resultText"></p>
+                <button type="button" class="reset-btn" onclick="location.reload()">Спробувати ще раз</button>
+            </div>
+        </main>
+    </div>
+    <footer class="main-footer">
+        <p>Всесвіт серіалу Ззовні (From 2022)</p>
+    </footer>
+    <script>
+        const audio = document.getElementById('backgroundAudio');
+        const btn = document.getElementById('audioControl');
+        btn.addEventListener('click', () => {
+            if (audio.paused) { audio.play(); btn.innerText = '⏸'; }
+            else { audio.pause(); btn.innerText = '🔊'; }
+        });
+        function checkResult() {
+            const form = document.getElementById('survivalForm');
+            const resultBox = document.getElementById('resultBox');
+            const resultText = document.getElementById('resultText');
+            const q1 = form.querySelector('input[name="q1"]:checked');
+            const location = form.location.value;
+            form.classList.add('hidden');
+            resultBox.classList.remove('hidden');
+            if (q1 && q1.value === "1" && location === "house") {
+                resultText.innerText = "Вітаємо! У вас є шанси стати новим шерифом. Ви дієте розсудливо та поважаєте правила міста.";
+                resultText.style.color = "#00ff00";
+            } else {
+                resultText.innerText = "На жаль, монстри знайшли вас у першу ж ніч. Наступного разу не відчиняйте вікна!";
+                resultText.style.color = "#ff4444";
+            }
+        }
+    </script>
+</body>
+</html>

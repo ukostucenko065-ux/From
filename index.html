@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Всесвіт серіалу Ззовні (From 2022)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="audio-widget">
+        <button id="audioControl" class="pulse-button">🔊</button>
+        <audio id="backgroundAudio" src="sound.mp3" loop></audio>
+        <span class="audio-label">Атмосфера</span>
+    </div>
+    <header class="hero-banner">
+        <div class="hero-overlay">
+            <div class="hero-text">
+                <h1>ЗЗОВНІ</h1>
+                <p class="tagline">From &bull; 2022-2026 &bull; США</p>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <nav class="nav-bar">
+            <a href="index.html" class="nav-item active">Про серіал</a>
+            <a href="plot.html" class="nav-item">Опис сюжету</a>
+            <a href="cast.html" class="nav-item">Дійові особи</a>
+            <a href="theories.html" class="nav-item">Теорії глядачів</a>
+            <a href="test.html" class="nav-item">Інтерактив</a>
+        </nav>
+        <main class="main-content">
+            <article>
+                <h2 class="section-title">Загальний огляд проекту</h2>
+                <p>
+                    <strong>«Ззовні» (From)</strong> — це масштабний американський науково-фантастичний телесеріал у жанрі хорору та детективної драми, створений сценаристом Джоном Ґріффіном. Проект став одним із найяскравіших представників сучасної містики, зумівши поєднати в собі елементи класичного «герметичного» детективу та надприродного жаху.
+                </p>
+                <div class="highlight-box">
+                    <h3>Ключові технічні характеристики</h3>
+                    <ul class="custom-list">                        
+                        <li><strong>Прем'єра:</strong> 20 лютого 2022 року на платформі MGM+ (колишня Epix).</li>
+                        <li><strong>Виконавчі продюсери:</strong> Джек Бендер та Джефф Пінкнер (творці культового серіалу «Загублені»).</li>
+                        <li><strong>Жанр:</strong> Психологічний трилер, наукова фантастика, надприродний жах.</li>
+                        <li><strong>Локація зйомок:</strong> Галіфакс, провінція Нова Шотландія, Канада.</li>
+                    </ul>
+                </div>
+                <h3>Концепція та унікальність лору</h3>
+                <p>
+                    Серіал розповідає про безіменне містечко, яке затягує в себе випадкових мандрівників. Головною особливістю проекту є його <strong>нелінійна подача сюжету</strong> та глибока міфологія. Творці побудували світ, де правила виживання змінюються з кожним сезоном, змушуючи глядача самостійно збирати пазл того, що відбувається.
+                </p>
+                <p>
+                    На відміну від багатьох інших серіалів про виживання, «Ззовні» робить ставку на психологію страху перед невідомим. Монстри тут — це не просто хижаки, а істоти, що імітують людську поведінку, маніпулюють почуттями та завжди посміхаються, що створює ефект «зловісної долини».
+                </p>
+                <div class="info-grid">
+                    <div class="grid-item">
+                        <h4>Спадщина «Загублених»</h4>
+                        <p>Участь Гарольда Перріно та команди режисерів Lost забезпечила серіалу схожу атмосферу загадковості. Критики відзначають, що «Ззовні» вдало підхоплює естафету складних пазл-драм, де кожна деталь у кадрі може бути підказкою.</p>
+                    </div>
+                    <div class="grid-item">
+                        <h4>Локація як дійова особа</h4>
+                        <p>Декорації містечка були збудовані на місці старої радарної бази часів Холодної війни. Це не просто набір стін, а штучне місто, де кожна вулиця та будинок мають свою передісторію.</p>
+                    </div>
+                </div>
+                <h3>Визнання та культурний вплив</h3>
+                <p>
+                    Серіал отримав потужний поштовх у популярності після того, як його публічно підтримав <strong>Стівен Кінг</strong>. Його порівняння проекту з кращими зразками містичної літератури привернуло увагу мільйонів нових глядачів. Після третього сезону проект став справжнім хітом у соціальних мережах, де фанати створюють багатогодинні розбори теорій та символіки.
+                </p>
+                <div class="cta-section">
+                    <h4>Детальніше</h4>
+                    <p>Ознайомтеся з офіційними джерелами та рейтингами серіалу на провідних платформах:</p>
+                    <div class="links-flex">
+                        <a href="https://www.imdb.com/title/tt9814142/" target="_blank" class="btn-link">IMDb</a>
+                        <a href="https://www.rottentomatoes.com/tv/from" target="_blank" class="btn-link">Rotten Tomatoes</a>
+                    </div>
+                </div>
+            </article>
+        </main>
+    </div>
+    <footer class="main-footer">
+        <p>Всесвіт серіалу Ззовні (From 2022)</p>
+    </footer>
+    <script>
+        const audio = document.getElementById('backgroundAudio');
+        const btn = document.getElementById('audioControl');
+        btn.addEventListener('click', () => {
+            if (audio.paused) {
+                audio.play();
+                btn.innerText = '⏸';
+            } else {
+                audio.pause();
+                btn.innerText = '🔊';
+            }
+        });
+    </script>
+</body>
+</html>

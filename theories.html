@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Всесвіт серіалу Ззовні</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="audio-widget">
+        <button id="audioControl" class="pulse-button">🔊</button>
+        <audio id="backgroundAudio" src="sound.mp3" loop></audio>
+        <span class="audio-label">Атмосфера</span>
+    </div>
+    <header class="hero-banner small-banner">
+        <div class="hero-overlay">
+            <div class="hero-text">
+                <h1>ТЕОРІЇ</h1>
+                <p class="tagline">Що насправді приховує це місто?</p>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <nav class="nav-bar">
+            <a href="index.html" class="nav-item">Про серіал</a>
+            <a href="plot.html" class="nav-item">Опис сюжету</a>
+            <a href="cast.html" class="nav-item">Дійові особи</a>
+            <a href="theories.html" class="nav-item active">Теорії глядачів</a>
+            <a href="test.html" class="nav-item">Інтерактив</a>
+        </nav>
+        <main class="main-content">
+            <h2 class="section-title">Найпопулярніші версії фанатів</h2>
+            <p style="text-align: center; color: #9fbf9f;">Серіал породжує безліч запитань. Ми зібрали 4 найцікавіші теорії про те, де знаходяться герої.</p>
+            <div class="theories-grid">
+                <div class="theory-card">
+                    <div class="theory-icon">🌀</div>
+                    <h3>Експеримент у часі</h3>
+                    <p>Згідно з цією версією, місто — це закритий полігон для тестування технологій викривлення простору. Можливо, герої перебувають у 1950-х роках, які були "заморожені" або відтворені штучно.</p>
+                    <ul class="theory-list">
+                        <li>Електрика працює без дротів.</li>
+                        <li>Монстри вбрані у стилі минулого століття.</li>
+                        <li>Їжа з'являється нізвідки.</li>
+                    </ul>
+                </div>
+                <div class="theory-card">
+                    <div class="theory-icon">⛪</div>
+                    <h3>Чистилище</h3>
+                    <p>Класична теорія для подібних серіалів. Вважається, що всі мешканці потрапили в аварію (згадайте повалене дерево) і зараз знаходяться між життям та смертю.</p>
+                    <ul class="theory-list">
+                        <li>Кожен бачить свої минулі гріхи.</li>
+                        <li>Місто "випробовує" їх на людяність.</li>
+                        <li>Вихід можливий лише через "смерть" у цьому світі (як це зробила Табіта).</li>
+                    </ul>
+                </div>
+                <div class="theory-card highlight">
+                    <div class="theory-icon">🌲</div>
+                    <h3>Давнє прокляття лісу</h3>
+                    <p>Теорія базується на фольклорі. Ліс — це живий організм або в'язниця для давньої сутності. Талісмани — це руни, які стримують зло, але воно постійно еволюціонує.</p>
+                    <ul class="theory-list">
+                        <li>Слово "Анкойя" як заклинання.</li>
+                        <li>Малюнки Віктора як передбачення.</li>
+                        <li>Дерева-портали, що переміщують людей.</li>
+                    </ul>
+                </div>
+                <div class="theory-card">
+                    <div class="theory-icon">🎮</div>
+                    <h3>Комп'ютерна симуляція</h3>
+                    <p>Джейд (геній програмування) неодноразово натякав на нелогічність фізики міста. Можливо, це гра або симуляція, де кожен герой — це "гравець", а монстри — це баги або системні очисники.</p>
+                </div>
+            </div>
+            <div class="mystery-image-section">
+                <img src="mystery.jpg" alt="Таємничий талісман" class="mystery-img">
+                <div class="mystery-text">
+                    <h3>Таємниця талісманів</h3>
+                    <p>Бойд знайшов їх у печері, але хто їх там залишив? Деякі фанати вважають, що талісмани працюють не через магію, а через <strong>віру</strong> мешканців у їхній захист.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer class="main-footer">
+        <p>Всесвіт серіалу Ззовні (From 2022)</p>
+    </footer>
+    <script>
+        const audio = document.getElementById('backgroundAudio');
+        const btn = document.getElementById('audioControl');
+        btn.addEventListener('click', () => {
+            if (audio.paused) { audio.play(); btn.innerText = '⏸'; }
+            else { audio.pause(); btn.innerText = '🔊'; }
+        });
+    </script>
+</body>
+</html>

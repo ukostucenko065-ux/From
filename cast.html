@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Всесвіт серіалу Ззовні</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="audio-widget">
+        <button id="audioControl" class="pulse-button">🔊</button>
+        <audio id="backgroundAudio" src="sound.mp3" loop></audio>
+        <span class="audio-label">Атмосфера</span>
+    </div>
+    <header class="hero-banner small-banner">
+        <div class="hero-overlay">
+            <div class="hero-text">
+                <h1>АКТОРСЬКИЙ СКЛАД</h1>
+                <p class="tagline">Ті, хто бореться за виживання</p>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <nav class="nav-bar">
+            <a href="index.html" class="nav-item">Про серіал</a>
+            <a href="plot.html" class="nav-item">Опис сюжету</a>
+            <a href="cast.html" class="nav-item active">Дійові особи</a>
+            <a href="theories.html" class="nav-item">Теорії глядачів</a>
+            <a href="test.html" class="nav-item">Інтерактив</a>
+        </nav>
+        <main class="main-content">
+            <h2 class="section-title">Головні герої та актори</h2>
+            <p style="text-align: center; margin-bottom: 30px;">У таблиці нижче наведено основний акторський склад серіалу та коротка характеристика їхніх персонажів.</p>
+            <div class="table-responsive">
+                <table class="cast-table">
+                    <thead>
+                        <tr>
+                            <th>Портрет</th>
+                            <th>Актор</th>
+                            <th>Персонаж</th>
+                            <th>Роль у громаді</th>
+                            <th>Статус</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="actor1.jpg" alt="Boyd" class="table-img"></td>
+                            <td><strong>Гарольд Перріно</strong></td>
+                            <td>Бойд Стівенс</td>
+                            <td>Шериф містечка, лідер громади</td>
+                            <td><span class="status-alive">Живий</span></td>
+                        </tr>
+                        <tr>
+                            <td><img src="actor2.jpg" alt="Jim" class="table-img"></td>
+                            <td><strong>Ейон Бейлі</strong></td>
+                            <td>Джим Метьюз</td>
+                            <td>Інженер, шукає спосіб зв'язку</td>
+                            <td><span class="status-alive">Живий</span></td>
+                        </tr>
+                        <tr>
+                            <td><img src="actor3.jpg" alt="Tabitha" class="table-img"></td>
+                            <td><strong>Каталіна Сандіно Морено</strong></td>
+                            <td>Табіта Метьюз</td>
+                            <td>Дружина Джима, знайшла вихід</td>
+                            <td><span class="status-unknown">Невідомо</span></td>
+                        </tr>
+                        <tr>
+                            <td><img src="actor4.jpg" alt="Victor" class="table-img"></td>
+                            <td><strong>Скотт Маккорд</strong></td>
+                            <td>Віктор</td>
+                            <td>Найстаріший мешканець міста</td>
+                            <td><span class="status-alive">Живий</span></td>
+                        </tr>
+                        <tr>
+                            <td><img src="actor5.jpg" alt="Jade" class="table-img"></td>
+                            <td><strong>Девід Алпей</strong></td>
+                            <td>Джейд Еррера</td>
+                            <td>Геній програмного забезпечення</td>
+                            <td><span class="status-alive">Живий</span></td>
+                        </tr>
+                        <tr>
+                            <td><img src="actor6.jpg" alt="Sara" class="table-img"></td>
+                            <td><strong>Ейвері Конрад</strong></td>
+                            <td>Сара Майєрс</td>
+                            <td>Чутлива до голосів міста</td>
+                            <td><span class="status-alive">Живий</span></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="5">Дані оновлено станом на 3 сезон (2025)</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </main>
+    </div>
+    <footer class="main-footer">
+        <p>Всесвіт серіалу Ззовні (From 2022)</p>
+    </footer>
+    <script>
+        const audio = document.getElementById('backgroundAudio');
+        const btn = document.getElementById('audioControl');
+        btn.addEventListener('click', () => {
+            if (audio.paused) { audio.play(); btn.innerText = '⏸'; }
+            else { audio.pause(); btn.innerText = '🔊'; }
+        });
+    </script>
+</body>
+</html>
